@@ -1,0 +1,436 @@
+/* ____GENERAL____ */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper{
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* ____MENU____ */
+.menu{
+    display: flex;
+    max-width: calc(425px*0.75);
+    width: 100%;
+    height: 100%;
+
+    padding-top: calc(55px*0.75);
+
+    position: relative;
+}
+
+
+.menu__wrapper{
+    max-width: calc(257px*0.75);
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+/* ____LOGO____ */
+
+.logo{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo_main{
+    margin-bottom: calc(92px*0.75);
+}
+
+.logo__image{
+    width: calc(37px*0.75);
+    height: calc(30px*0.75);
+
+    background: url(../img/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.logo__text{
+    margin-left: calc(18px*0.75);
+
+    font-weight: 500;
+    font-size: calc(25px*0.75);
+    line-height: calc(29px*0.75);
+}
+
+/* ____NAV____ */
+
+.nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: calc(55px*0.75);
+    border-radius: 5px;
+}
+
+.nav__pic{
+    width: calc(25px*0.75);
+    height: calc(25px*0.75);
+
+    margin-left: calc(20px*0.75);
+}
+
+.nav__text{
+    font-size: calc(20px*0.75);
+    line-height: calc(23px*0.75);
+    
+    margin-left: calc(13px*0.75);
+    
+    color: rgba(32, 28, 72, 0.4);
+}
+
+.nav__item_active{
+    background: #ECEFF8;
+    box-shadow: 0px 2px 2px rgba(32, 28, 72, 0.15);
+    border-radius: 5px;
+}
+
+.nav__item_active .nav__text{
+    color: #201C48;
+}
+
+.nav__path{
+    fill: rgba(32, 28, 72, 0.4);
+}
+
+.nav__path_active{
+    fill: #201C48;
+}
+
+/* ____EXIT____ */
+
+.exit{
+    width: fit-content;
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+
+    bottom: calc(100px*0.75);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    cursor: pointer;
+}
+
+.exit__pic{
+    width: calc(21px*0.75);
+    height: calc(21px*0.75);
+
+    background: url(../img/exit.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin-right: calc(16px*0.75);
+}
+
+.exit__text{
+    font-size: calc(20px*0.75);
+    line-height: calc(23px*0.75);
+    
+    color: #444360;
+}
+
+/* ____MAIN____ */
+
+.main{
+    width: 100%;
+    padding-top: calc(51px*0.75);
+    padding-right: calc(59px*0.75);
+}
+
+/* ____TOPBAR____ */
+
+.topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: calc(51px*0.75);
+}
+
+.topbar__title{
+    font-size: calc(35px*0.75);
+    line-height: calc(41px*0.75);
+
+    color: #201C48;
+}
+
+.topbar__notifications{
+    width: calc(38px*0.75);
+    height: calc(38px*0.75);
+
+    background: url(../img/topbar__bell.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin-right: calc(57px*0.75);
+}
+
+.topbar__functional{
+    display: flex;
+    align-items: center;
+}
+
+/* ____SEARCH____ */
+
+.search{
+    position: relative;
+
+    margin-right: calc(57px*0.75);
+}
+
+.search__input{
+    background: #ECEFF8;
+    border-radius: 30px;
+    width: calc(155px*0.75);
+    height: calc(38px*0.75);
+
+    border: none;
+
+    padding-left: 10px;
+    padding-right: 25px;
+
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.search__input:focus{
+    outline: none;
+}
+
+
+.search__button{
+    width: calc(20px*0.75);
+    height: calc(20px*0.75);
+
+    position: absolute;
+    right: 0;
+    top: 6px;
+
+    border: none;
+
+    background: url(../img/topbar__search.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin-right: calc(16px*0.75);
+}
+
+/* ____USER____ */
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.user__pic{
+    width: calc(53px*0.75);
+    height: calc(53px*0.75);
+
+    background: url(../img/topbar__profile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin-right: calc(20px*0.75);
+}
+
+.user__text{
+    font-size: calc(25px*0.75);
+    line-height: calc(29px*0.75);
+    
+    color: #201C48;
+}
+
+/* ____COURSES____ */
+
+.courses{
+    display: flex;
+}
+
+.courses__left{
+    flex-basis: 77%;
+}
+
+.courses__right{
+    flex-basis: 23%;
+    margin-left: calc(52px*0.75);
+}
+
+.courses__menu-item{
+    font-size: calc(20px*0.75);
+    line-height: calc(23px*0.75);
+    text-decoration: none;
+
+    margin-right: calc(42px*0.75);
+    padding: calc(5px*0.75);
+    
+    color: #201C48;
+    z-index: 11;
+}
+
+.courses__menu-item_active{
+    border-bottom: 5px solid #459AFF;
+}
+
+.divider{
+    width: 100%;
+    height: 0;
+    border: calc(2px*0.75) solid #ECEFF8;
+    z-index: 10;
+
+    margin-top: 5px;
+}
+
+.courses__wrapper{
+    margin-top: calc(48px*0.75);
+    /*overflow-y: scroll;*/
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.courses__options{
+    background: #ECEFF8;
+    border-radius: 10px;
+
+    padding: calc(15px*0.75) calc(20px*0.75) calc(30px*0.75) calc(20px*0.75);
+
+    width: 100%;
+    height: fit-content;
+}
+
+
+.courses__title{
+    font-size: calc(20px*0.75);
+    line-height: calc(23px*0.75);
+    
+    color: #201C48;
+}
+
+.courses__title_blue{
+    margin-top: calc(47px*0.75);
+    margin-bottom: calc(20px*0.75);
+
+    color: #459AFF;
+}
+
+/* ____COURSE____ */
+
+.course{
+    width: calc(229px*0.75);
+    height: calc(229px*0.75);
+    margin-right: calc(22px*0.75);
+    margin-left: calc(22px*0.75);
+    margin-bottom: calc(44px*0.75);
+
+    
+    background: #459AFF;
+}
+
+/* The container */
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: calc(20px*0.75);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.container-checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark {
+    background-color: #459AFF;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.container-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.courses__pic{
+    width: 100%;
+    background: #201C48;
+    border-radius: 10px;
+
+    margin-top: 16px;
+
+    padding: calc(15px*0.75) calc(20px*0.75) calc(30px*0.75) calc(20px*0.75);
+}
+
+.courses__image{
+    margin-left: 35px;
+}
