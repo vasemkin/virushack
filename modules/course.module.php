@@ -15,6 +15,20 @@ class CourseModule
         $this->pdo = $pdo;
     }
 
+    function getCategories() {
+        $query = 'select * from categories order by name asc';
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    function getSpheres() {
+        $query = 'select * from spheres order by name asc';
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     function getCourses($params = [])
     {
         if (sizeof($params) == 0) {
@@ -43,6 +57,7 @@ class CourseModule
                 $query .= " WHERE spheres.id IN ($sph)";
             }
         }
+        $query .= ' GROUP BY courses.name';
         $stmt = $this->pdo->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll();

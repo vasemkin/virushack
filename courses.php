@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>HistoCours</title>
+    <script src="js/app.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -120,7 +122,12 @@
             </div>
         </div><!-- /menu -->
         <div class="divider divider__vertical"></div>
-
+        <? 
+        // Инициализация api
+        include 'modules/course.module.php';
+        $module = new CourseModule();
+        // Конец инициализации
+        ?>
         <main class="main">
             <div class="topbar">
                 <div class="topbar__title">Курсы</div>
@@ -142,7 +149,6 @@
 
                 </div><!-- /topbar__functional -->
             </div><!-- /topbar -->
-
             <div class="courses">
 
                 <div class="courses__left">
@@ -154,8 +160,8 @@
     
                     <div class="divider"></div>
 
-                
-                    <div class="courses__wrapper">
+                    <?include 'templates/courses/courses.tpl.php'; ?>
+                    <!-- <div class="courses__wrapper">
                         <div class="course"></div>
                         <div class="course"></div>
                         <div class="course"></div>
@@ -168,65 +174,17 @@
                         <div class="course"></div>
                         <div class="course"></div>
                         <div class="course"></div>
-                    </div>
+                    </div> -->
 
                 </div>
 
                 <div class="courses__right">
-                    <div class="courses__options">
-                        <div class="courses__title">Фильтры</div>
-                        <form action="" class="courses__area">
-                            
-                        </form>
-                        <div class="courses__title courses__title_blue">Область</div>
-    
-                        <label class="container-checkbox">Технические науки
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-checkbox">Гуманитарные науки
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-checkbox">Естественные науки
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-    
-                        
-                        <div class="courses__title courses__title_blue">Категории</div>
-    
-                        <label class="container-checkbox">Поп курсы
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-checkbox">Новые курсы
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-checkbox">Для школьников
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-checkbox">Для студентов
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-checkbox">Для всех
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-    
-                    </div><!-- /courses__options -->
-                    
+                    <?include 'templates/courses/filters.tpl.php' ?>
                     <div class="courses__pic">
                         <img width="168px" height="126" class="courses__image" src="img/courses__image.png" alt="courses">
                     </div>
 
                 </div>
-
-
-
             </div><!-- /courses -->
         </main>
     </div>
