@@ -154,8 +154,8 @@
                 <div class="courses__left">
 
                     <div class="courses__menu">
-                        <a class="courses__menu-item courses__menu-item_active" href='courses.php'>Полные курсы</a>
-                        <a class="courses__menu-item" href='themes.php'>Темы</a>
+                        <a class="courses__menu-item" href='courses.php'>Полные курсы</a>
+                        <a class="courses__menu-item courses__menu-item_active" href='themes.php'>Темы</a>
                     </div>
     
                     <div class="divider"></div>
