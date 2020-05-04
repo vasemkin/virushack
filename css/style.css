@@ -456,7 +456,7 @@ html, body {
 }
 
 .constructor__left{
-    flex-basis: 600px;
+    flex-basis: 900px;
 }
 
 .constructor__right{
@@ -516,7 +516,7 @@ html, body {
 .constructor__input{
     margin-left: calc(29px*0.75);
 
-    width: calc(457px*0.75);
+    width: calc(712px*0.75);
     height: calc(50px*0.75);
 
     border: none;
@@ -549,5 +549,67 @@ html, body {
 }
 
 .constructor__role_student{
-    margin-right: 7px;
+    margin-right: 10px;
+}
+
+.constructor__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.constructor__top-left{
+    display: flex;
+    align-items: center;
+}
+
+.constructor__examples{
+    background: #ECEFF8;
+    border-radius: 5px;
+
+    padding: calc(20px*0.75);
+}
+
+.constructor__info{
+    display: block;
+
+    width: calc(15px*0.75);
+    height: calc(15px*0.75);
+
+    background: #459AFF;
+    border: none;
+
+    border-radius: 100%;
+    color: #fff;
+
+    font-weight: bold;
+    font-size: calc(10px*0.75);
+    line-height: calc(12px*0.75);
+
+    margin-left: 7.5px;
+
+    text-align: center;
+}
+
+.constructor__title{
+    margin-bottom: calc(23px*0.75);
+}
+
+.constructor__options-inline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: calc(17px*0.75);
+}
+
+.constructor__option{
+    width: calc(164.05px*0.75);
+    height: calc(35.94px*0.75);
+
+    border: none;
+    
+    background: #FFFFFF;
+    border-radius: 5px;
+    
 }
